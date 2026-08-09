@@ -54,69 +54,182 @@ body {
     padding: 0 15px;
 }
 
+/* Header */
 
-/* header */
 .site-header {
     position: sticky;
     top: 0;
     z-index: 30;
-    padding: 8px 0;
-    color: var(--white);
-    background:
-        linear-gradient(140deg, rgba(18, 26, 21, 0.96) 0%, rgba(25, 37, 30, 0.94) 100%);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .header-inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 5px 10px;
-    border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(255, 255, 255, 0.04);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    gap: 28px;
+    min-height: 72px;
+    padding: 0 15px;
 }
 
+/* Logo */
+
 .brand {
-    font-size: 1.65rem;
+    flex-shrink: 0;
+    font-size: 1.6rem;
     font-weight: 800;
-    letter-spacing: 0.01em;
-    color: var(--white);
+    letter-spacing: -0.02em;
+    color: #222222;
     text-transform: uppercase;
 }
 
 .brand span {
-    color: #68d58f;
+    color: var(--primary);
 }
+
+/* Main navigation */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    flex: 1;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item > a {
+    display: block;
+    padding: 25px 12px;
+    color: #333333;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.nav-item > a:hover,
+.nav-item > a:focus-visible {
+    color: var(--primary);
+    background-color: #f5f8f6;
+}
+
+/* Dropdown menus */
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 215px;
+    padding: 8px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+
+    transition:
+        opacity 0.15s ease,
+        transform 0.15s ease,
+        visibility 0.15s ease;
+}
+
+.nav-item:hover .dropdown,
+.nav-item:focus-within .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px 12px;
+    color: #333333;
+    font-size: 0.85rem;
+    border-radius: 5px;
+}
+
+.dropdown a:hover,
+.dropdown a:focus-visible {
+    color: var(--primary-dark);
+    background-color: #f1f8f3;
+}
+
+/* Right side of header */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+/* Currency selector */
 
 .currency-selector {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.88);
+    color: #333333;
 }
 
 .currency-selector label {
     font-weight: 600;
-    letter-spacing: 0.02em;
 }
 
 .currency-selector select {
-    min-width: 102px;
-    padding: 8px 12px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.24);
-    background: rgba(255, 255, 255, 0.12);
-    color: #ffffff;
-    font-weight: 700;
-    outline: none;
+    min-width: 72px;
+    padding: 8px 9px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
-.currency-selector select option {
-    color: #111;
+.currency-selector select:hover {
+    border-color: #bdbdbd;
+}
+
+.currency-selector select:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Support link */
+
+.header-link {
+    color: #333333;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.header-link:hover,
+.header-link:focus-visible {
+    color: var(--primary);
+}
+
+/* Header CTA */
+
+.header-cta {
+    display: inline-block;
+    padding: 10px 17px;
+    border-radius: 6px;
+    background-color: var(--primary);
+    color: #ffffff;
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.header-cta:hover,
+.header-cta:focus-visible {
+    background-color: var(--primary-dark);
 }
 
 /* hero */
@@ -719,74 +832,70 @@ footer::before,
 
 /* Responsive */
 @media (max-width: 768px) {
-    .pricing-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .card.popular {
-        transform: none;
-    }
 
     .site-header {
         padding: 10px 0;
     }
 
     .header-inner {
-        flex-direction: column;
+        min-height: auto;
+        padding: 12px 15px;
+        flex-wrap: wrap;
         gap: 12px;
-        align-items: stretch;
-        padding: 12px;
+    }
+
+    .brand {
+        margin-right: auto;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        border-top: 1px solid #eeeeee;
+        padding-top: 5px;
+    }
+
+    .nav-item > a {
+        white-space: nowrap;
+        padding: 10px;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+
+    .header-link {
+        display: none;
+    }
+
+    .support-link {
+        display: none;
+    }
+
+    .header-cta {
+        padding: 9px 12px;
+        font-size: 0.82rem;
     }
 
     .currency-selector {
-        justify-content: space-between;
+        gap: 6px;
+    }
+
+    .currency-selector label {
+        display: none;
     }
 
     .currency-selector select {
-        width: 100%;
-        min-width: 0;
+        width: auto;
+        min-width: 88px;
+        padding: 7px 8px;
     }
 
-    .hero {
-        padding: 62px 0 54px;
-    }
-
-    .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .hero-copy,
-    .hero-panel {
-        padding: 24px 20px;
-        border-radius: 16px;
-    }
-
-    .hero h1 {
-        max-width: none;
-        font-size: clamp(1.95rem, 9vw, 2.55rem);
-    }
-
-    .hero-lead {
-        font-size: 1rem;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-    }
-
-    .hero .btn,
-    .hero .btn-secondary {
-        width: 100%;
-        text-align: center;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-
-    .footer-note {
-        font-size: 0.9rem;
+    /* Keep dropdowns usable on smaller screens */
+    .dropdown {
+        position: fixed;
+        left: 0;
+        width: 200px;
     }
 }
