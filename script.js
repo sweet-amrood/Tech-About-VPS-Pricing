@@ -25,6 +25,22 @@ let currency = localStorage.getItem("vps-currency") || "PKR";
 let period = localStorage.getItem("vps-period") || "monthly";
 let selectedPlan = localStorage.getItem("vps-selected-plan") || "growth";
 
+// Initialize
+if (currencySelect) {
+  currencySelect.value = currency;
+}
+
+toggleBtns.forEach(btn => {
+  if (btn.dataset.period === period) {
+    btn.classList.add("active");
+  } else {
+    btn.classList.remove("active");
+  }
+});
+
+updateDisplay();
+setSelectedPlan(selectedPlan, false);
+
 // Event Listeners
 if (currencySelect) {
     currencySelect.addEventListener("change", (e) => {
@@ -52,6 +68,23 @@ selectPlanBtns.forEach(btn => {
         const card = btn.closest(".card");
         if (card && card.dataset.plan) {
             setSelectedPlan(card.dataset.plan);
+        }
+    });
+});
+
+// faq
+const faqQuestions = document.querySelectorAll(".faq-question");
+faqQuestions.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const answer = btn.nextElementSibling;
+        const isExpanded = btn.getAttribute("aria-expanded") === "true";
+
+        btn.setAttribute("aria-expanded", !isExpanded);
+        answer.hidden = isExpanded;
+
+        const span = btn.querySelector("span");
+        if (span) {
+            span.textContent = isExpanded ? "+" : "-";
         }
     });
 });
