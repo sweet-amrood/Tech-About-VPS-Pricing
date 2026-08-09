@@ -5,7 +5,7 @@ const rates = {
   GBP: 1 / 355.00
 };
 
-// currency symbols
+// currency 
 const symbols = {
   PKR: "₨",
   USD: "$",
