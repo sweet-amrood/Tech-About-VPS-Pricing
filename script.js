@@ -1,9 +1,15 @@
-
 // currency rates
 const rates = {
   PKR: 1,
   USD: 1 / 278.50,
   GBP: 1 / 355.00
+};
+
+// currency symbols
+const symbols = {
+  PKR: "₨",
+  USD: "$",
+  GBP: "£"
 };
 
 // base prices in PKR
