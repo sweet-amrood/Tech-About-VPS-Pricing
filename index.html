@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PKHosting VPS Pricing</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- Header -->
-     <header class="site-header">
+    <header class="site-header">
         <div class="container header-inner">
             <div class="brand">PK<span>Hosting</span></div>
             <div class="currency-selector">
@@ -21,11 +23,11 @@
                 </select>
             </div>
         </div>
-     </header>
+    </header>
 
-     <main>
+    <main>
         <!-- hero -->
-         <section class="hero">
+        <section class="hero">
             <div class="container hero-inner">
                 <div class="hero-copy">
                     <p class="subtitle">Your Trust of 16+ Years in VPS Hosting</p>
@@ -51,11 +53,222 @@
                     </ul>
                 </aside>
             </div>
-         </section>
+        </section>
 
-         <!-- pricing -->
+        <!-- pricing -->
+        <section id="plans" class="pricing">
+            <div class="container">
+                <h2 class="section-title">Choose Your Plan</h2>
 
-     </main>
-    
+                <div class="billing-toggle-wrapper">
+                    <div class="billing-toggle">
+                        <button class="toggle-btn active" data-period="monthly">Monthly</button>
+                        <button class="toggle-btn" data-period="annually">Annually <span class="save-badge">Save
+                                16.7%</span></button>
+                    </div>
+                </div>
+
+                <p id="price-announcement" class="sr-only" aria-live="polite"></p>
+
+                <div class="pricing-grid">
+                    <!-- starter plan -->
+                    <div class="card" data-plan="starter">
+                        <h3 class="plan-name">Starter</h3>
+                        <p>For small projects</p>
+                        <div class="price-block">
+                            <span class="currency-symbol">₨</span>
+                            <span class="price" data-monthly-pkr="2400">2,400</span>
+                            <span class="period">/mo</span>
+                        </div>
+                        <div class="annual-info"></div>
+                        <button type="button" class="select-plan-btn" data-select-plan aria-pressed="false">Select
+                            plan</button>
+                        <a href="#" class="btn btn-block">Get Started</a>
+                        <ul class="features">
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 2 vCPU cores</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 4 GB RAM</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 60 GB NVMe SSD</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 3 TB bandwidth</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 1 IPv4 address</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> Full root access</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> Linux OS options</li>
+                            <li class="unavailable"><svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                                </svg> Daily backup option</li>
+                            <li class="unavailable"><svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                                </svg> 24/7 support</li>
+                            <li class="unavailable"><svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                                </svg> Free setup</li>
+                        </ul>
+                    </div>
+
+                    <!-- growth plan -->
+                    <div class="card popular" data-plan="growth">
+                        <div class="popular-tag">Most Popular</div>
+                        <h3 class="plan-name">Growth</h3>
+                        <p>For growing apps</p>
+                        <div class="price-block">
+                            <span class="currency-symbol">₨</span>
+                            <span class="price" data-monthly-pkr="4800">4,800</span>
+                            <span class="period">/mo</span>
+                        </div>
+                        <div class="annual-info"></div>
+                        <button type="button" class="select-plan-btn" data-select-plan aria-pressed="false">Select
+                            plan</button>
+                        <a href="#" class="btn btn-block">Get Started</a>
+                        <ul class="features">
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 4 vCPU cores</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 8 GB RAM</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 120 GB NVMe SSD</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 5 TB bandwidth</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 1 IPv4 address</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> Full root access</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> Linux OS options</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> Daily backup option</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 24/7 support</li>
+                            <li class="unavailable"><svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                                </svg> Free setup</li>
+                        </ul>
+                    </div>
+
+                    <!-- scale plan -->
+                    <div class="card" data-plan="scale">
+                        <h3 class="plan-name">Scale</h3>
+                        <p>For heavy workloads</p>
+                        <div class="price-block">
+                            <span class="currency-symbol">₨</span>
+                            <span class="price" data-monthly-pkr="9600">9,600</span>
+                            <span class="period">/mo</span>
+                        </div>
+                        <div class="annual-info"></div>
+                        <button type="button" class="select-plan-btn" data-select-plan aria-pressed="false">Select
+                            plan</button>
+                        <a href="#" class="btn btn-block">Get Started</a>
+                        <ul class="features">
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 8 vCPU cores</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 16 GB RAM</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 240 GB NVMe SSD</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 8 TB bandwidth</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 2 IPv4 addresses</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> Full root access</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> Linux OS options</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> Daily backup option</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 24/7 support</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> Free setup</li>
+                        </ul>
+                    </div>
+
+                    <!-- dedicated plan -->
+                    <div class="card" data-plan="dedicated">
+                        <h3 class="plan-name">Dedicated Core</h3>
+                        <p>Maximum resources</p>
+                        <div class="price-block">
+                            <span class="currency-symbol">₨</span>
+                            <span class="price" data-monthly-pkr="19500">19,500</span>
+                            <span class="period">/mo</span>
+                        </div>
+                        <div class="annual-info"></div>
+                        <button type="button" class="select-plan-btn" data-select-plan aria-pressed="false">Select
+                            plan</button>
+                        <a href="#" class="btn btn-block">Get Started</a>
+                        <ul class="features">
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 12 vCPU cores</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 32 GB RAM</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 400 GB NVMe SSD</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 12 TB bandwidth</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 2 IPv4 addresses</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> Full root access</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> Linux OS options</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> Daily backup option</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> 24/7 support</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg> Free setup</li>
+                        </ul>
+                    </div>
+                </div>
+        </section>
+
+
+    </main>
+
 </body>
+
 </html>
