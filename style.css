@@ -432,16 +432,16 @@ body {
 /* cta */
 
 .pricing-cta {
-  text-align: center;
+    text-align: center;
 }
 
 .pricing-cta-bottom {
-  margin: 28px auto 10px;
+    margin: 28px auto 10px;
 }
 
 .pricing-cta-link {
-  padding: 15px 40px;
-  font-size: 1.1rem;
+    padding: 15px 40px;
+    font-size: 1.1rem;
 }
 
 /* comparison table */
@@ -467,12 +467,14 @@ table {
     background: var(--white);
 }
 
-th, td {
+th,
+td {
     padding: 16px 18px;
     vertical-align: middle;
     text-align: left;
     border-bottom: 1px solid var(--border-color);
 }
+
 th {
     background: #f3f6f8;
     font-weight: 700;
@@ -545,4 +547,43 @@ tbody tr:last-child td:last-child {
 .faq-answer {
     padding: 0 20px 20px;
     color: var(--text-light);
+}
+
+.footer {
+    background-color: var(--header-bg);
+    color: var(--white);
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.payment-methods span {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card.popular {
+        transform: none;
+    }
+
+    .header-inner {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
