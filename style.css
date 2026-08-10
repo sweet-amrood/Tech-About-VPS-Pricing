@@ -1110,3 +1110,124 @@ tbody tr:last-child td:last-child {
         width: 200px;
     }
 }
+
+/* Mobile navigation */
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 2px;
+    margin: 5px 0;
+    background: #222;
+    border-radius: 2px;
+}
+
+/* Tablet and mobile */
+@media (max-width: 1024px) {
+
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-inner {
+        position: relative;
+        min-height: 58px;
+    }
+
+    .menu-toggle {
+        display: block;
+        flex-shrink: 0;
+    }
+
+    /* Keep the main header row intact */
+    .main-nav {
+        display: none;
+    }
+
+    /*
+       When opened, the navigation is taken
+       out of the header's normal layout.
+    */
+    .main-nav.open {
+        display: flex;
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 10px;
+
+        background: #fff;
+        border: 1px solid #ddd;
+        border-top: none;
+
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-item > a {
+        display: block;
+        width: 100%;
+        padding: 12px 14px;
+        color: #222;
+        border-radius: 6px;
+    }
+
+    .nav-item > a:hover,
+    .nav-item > a:focus-visible {
+        background-color: #f3f5f4;
+        color: var(--primary-dark);
+    }
+
+    /* Mobile dropdowns */
+    .dropdown {
+        position: static;
+        display: none;
+        width: 100%;
+
+        margin: 0;
+        padding: 5px 0 5px 15px;
+
+        background: #f8f9fa;
+        border: none;
+        border-radius: 6px;
+        box-shadow: none;
+
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .nav-item:hover .dropdown,
+    .nav-item:focus-within .dropdown {
+        display: block;
+    }
+
+    .dropdown a {
+        color: #333;
+        padding: 10px 12px;
+    }
+
+    .dropdown a:hover,
+    .dropdown a:focus-visible {
+        background-color: #eaf3ed;
+        color: var(--primary-dark);
+    }
+}
