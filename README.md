@@ -14,6 +14,14 @@ The main site is https://www.pkhosting.com/. Links from header and footer redire
 
 Open index.html in your browser.
 
+<!-- testing & unfinished -->
+
+it was tested in:
+- Google Chrome
+-Microsoft Edge
+
+-From my pov its not missing but many things can be improved if we use more than just plain html and css, like using react tailwind or next.js and using different js libraries to make it more interactive and attention catching for user mainly hero section like using gsap or threejs or animejs, plus i could also have used framer motion for a little bit more interactiveness, small things make big differences, this page was desinged to kep it simple and basic as per instructions nothing complex or out of the line was added or used.
+
 <!-- funtions -->
 
 - Header with PK Hosting text logo (no image logo)
