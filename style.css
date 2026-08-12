@@ -1215,8 +1215,7 @@ tbody tr:last-child td:last-child {
         transform: none;
     }
 
-    .nav-item:hover .dropdown,
-    .nav-item:focus-within .dropdown {
+    .nav-item.open .dropdown {
         display: block;
     }
 

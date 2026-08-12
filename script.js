@@ -79,6 +79,42 @@ selectPlanBtns.forEach(btn => {
   });
 });
 
+// mobile menu
+const menuToggle = document.querySelector(".menu-toggle");
+const mainNav = document.querySelector(".main-nav");
+
+function closeNavDropdowns() {
+  document.querySelectorAll(".nav-item.open").forEach(item => {
+    item.classList.remove("open");
+    const btn = item.querySelector(".nav-parent");
+    if (btn) btn.setAttribute("aria-expanded", "false");
+  });
+}
+
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = mainNav.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+    if (!isOpen) closeNavDropdowns();
+  });
+}
+
+document.querySelectorAll(".nav-parent").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const item = btn.closest(".nav-item");
+    if (!item) return;
+
+    const isOpen = item.classList.contains("open");
+    closeNavDropdowns();
+
+    if (!isOpen) {
+      item.classList.add("open");
+      btn.setAttribute("aria-expanded", "true");
+    }
+  });
+});
+
 // FAQs
 const faqQuestions = document.querySelectorAll(".faq-question");
 faqQuestions.forEach(btn => {
