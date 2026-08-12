@@ -101,7 +101,8 @@ body {
     position: relative;
 }
 
-.nav-item > a {
+.nav-item > a,
+.nav-parent {
     display: block;
     padding: 25px 12px;
     color: #333333;
@@ -110,8 +111,23 @@ body {
     border-radius: 6px;
 }
 
+.nav-parent {
+    width: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dropdown-arrow {
+    font-size: 0.8rem;
+    margin-left: 6px;
+}
+
 .nav-item > a:hover,
-.nav-item > a:focus-visible {
+.nav-item > a:focus-visible,
+.nav-parent:hover,
+.nav-parent:focus-visible {
     height: 50%;
     color: var(--primary);
     background-color: #f5f8f6;
@@ -1182,7 +1198,8 @@ tbody tr:last-child td:last-child {
         width: 100%;
     }
 
-    .nav-item > a {
+    .nav-item > a,
+    .nav-parent {
         display: block;
         width: 100%;
         padding: 12px 14px;
@@ -1191,7 +1208,9 @@ tbody tr:last-child td:last-child {
     }
 
     .nav-item > a:hover,
-    .nav-item > a:focus-visible {
+    .nav-item > a:focus-visible,
+    .nav-parent:hover,
+    .nav-parent:focus-visible {
         background-color: #f3f5f4;
         color: var(--primary-dark);
     }
