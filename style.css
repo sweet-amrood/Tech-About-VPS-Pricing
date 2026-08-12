@@ -128,7 +128,6 @@ body {
 .nav-item > a:focus-visible,
 .nav-parent:hover,
 .nav-parent:focus-visible {
-    height: 50%;
     color: var(--primary);
     background-color: #f5f8f6;
 }
@@ -415,6 +414,12 @@ body {
     background-color: #dee2e6;
 }
 
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
 .hero-highlights {
     list-style: none;
     display: flex;
@@ -635,6 +640,11 @@ body {
     color: var(--text-light);
 }
 
+.card.popular .period,
+.card.popular .annual-info {
+    color: rgba(255, 255, 255, 0.88);
+}
+
 .annual-info {
     min-height: 40px;
     font-size: 0.85rem;
@@ -821,7 +831,6 @@ tbody tr:last-child td:last-child {
     color: var(--text-light);
 }
 
-/* footer */
 /* footer */
 
 .site-footer {
@@ -1119,12 +1128,6 @@ tbody tr:last-child td:last-child {
         padding: 7px 8px;
     }
 
-    /* Keep dropdowns usable on smaller screens */
-    .dropdown {
-        position: fixed;
-        left: 0;
-        width: 200px;
-    }
 }
 
 /* Mobile navigation */

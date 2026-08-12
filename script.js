@@ -12,14 +12,6 @@ const symbols = {
   GBP: "£"
 };
 
-// base prices in PKR
-const monthlyPrices = {
-  starter: 2400,
-  growth: 4800,
-  scale: 9600,
-  dedicated: 19500
-};
-
 // elements
 const currencySelect = document.getElementById("currency");
 const toggleBtns = document.querySelectorAll(".toggle-btn");
@@ -122,7 +114,7 @@ faqQuestions.forEach(btn => {
     const answer = btn.nextElementSibling;
     const isExpanded = btn.getAttribute("aria-expanded") === "true";
     
-    btn.setAttribute("aria-expanded", !isExpanded);
+    btn.setAttribute("aria-expanded", String(!isExpanded));
     answer.hidden = isExpanded;
     
     const span = btn.querySelector("span");
@@ -135,10 +127,10 @@ faqQuestions.forEach(btn => {
 // helper functions
 function updateDisplay() {
   cards.forEach(card => {
-    const planId = card.dataset.plan;
-    const basePkr = monthlyPrices[planId];
-    
     const priceEl = card.querySelector(".price");
+    const basePkr = Number(priceEl?.dataset.monthlyPkr);
+    if (!Number.isFinite(basePkr)) return;
+    
     const symbolEl = card.querySelector(".currency-symbol");
     const periodEl = card.querySelector(".period");
     const annualInfo = card.querySelector(".annual-info");
