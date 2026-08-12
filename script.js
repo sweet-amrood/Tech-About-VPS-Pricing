@@ -134,9 +134,21 @@ function updateDisplay() {
     const symbolEl = card.querySelector(".currency-symbol");
     const periodEl = card.querySelector(".period");
     const annualInfo = card.querySelector(".annual-info");
+    const oldPriceEl = card.querySelector(".old-price");
+    const saveTextEl = card.querySelector(".save-text");
+    const originalPkr = basePkr * 1.35;
+    const savePercent = Math.round(((originalPkr - basePkr) / originalPkr) * 100);
     
     if (symbolEl) {
       symbolEl.textContent = symbols[currency];
+    }
+
+    if (oldPriceEl) {
+      oldPriceEl.textContent = `${symbols[currency]}${formatNumber(originalPkr)}`;
+    }
+
+    if (saveTextEl) {
+      saveTextEl.textContent = `Save ${savePercent}%`;
     }
     
     if (period === "monthly") {
