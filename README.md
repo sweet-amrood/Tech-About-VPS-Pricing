@@ -39,7 +39,8 @@ Open index.html in your browser.
 - Prices are written in html only, in case of need to change the prices it can be changed in html
 
 
-
 - Exchange rates in script.js are hardcoded aas required
 - Annual billing uses 10 months paid for 12 months of service as per instructions
 - JavaScript is needed for currency, billing, and interactive parts. Basic content still works without it
+
+- AI was used in parts of this project for assistence
